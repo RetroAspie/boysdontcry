@@ -1,0 +1,114 @@
+<html>
+<head>
+<style type=text/css>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.img-container {
+  min-height: 400px;
+  background-image: url(banner.jpg);
+  background-repeat: no-repeat;
+  background-size: 1800px 400px;
+  background-position: center top;
+  /*padding: 40px; (If don't want to set min-height or some image content is there) */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px;
+  font-family: 'Open Sans', 'sans-serif';
+  background-color: #fff;
+  color: #444;
+}
+
+h1,
+p {
+  margin: 0 0 1em 0;
+}
+
+.wrapper {
+  max-width: 940px;
+  margin: 0 20px;
+ /* display: grid;*/
+  grid-gap: 10px;
+}
+
+
+/* no grid support? */
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(127px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.panel {
+  /* needed for the flex layout*/
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 1 1 200px;
+}
+
+.tall-panel {
+  grid-row-end: span 2;
+}
+
+.header,
+.footer {
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 0 1 100%;
+  grid-column: 1 / -1;
+}
+
+.wrapper > * {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  margin-bottom: 10px;
+}
+
+
+/* We need to set the margin used on flex items to 0 as we have gaps in grid.  */
+
+@supports (display: grid) {
+  .wrapper > * {
+    margin: 0;
+  }
+}
+</style>
+</head>
+<body>
+<img src="boysdontcry.png" title="boys don't cry, y'know?" alt="boys don't cry">
+<br>
+<font size=20 face="Times New Roman"><a href="https://retroaspie.github.io/boysdontcry/">boys don't cry</a> - <a href="lineup.html">line up</a> - <a href="art.html">art</a></font>
+<br>
+<marquee scrollamount=50 bgcolor=orange>
+	<b><font size=5>boys don't cry, y'know?</font></b>
+</marquee>
+<br>
+<font size=18 face="Times New Roman">ALL MUSIC IS ART</font>
+<br>
+<font size=18 face="Times New Roman">ART IS ANYTHING</font>
+<br>
+<br>
+<font size=20 face="Arial">pcpowerpadpro - Version 1.0</font>
+<img src="Version 1.0 reduced.png" title="Version 1.0" alt="Version 1.0">
+</body>
+</html>
